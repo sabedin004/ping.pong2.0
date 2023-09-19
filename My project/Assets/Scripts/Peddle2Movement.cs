@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaddleMove : MonoBehaviour
+public class Peddle2Movement : MonoBehaviour
 {
     //variable for movement
     public float speed = 0.1f;
@@ -20,12 +20,12 @@ public class PaddleMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.O) && transform.position.y < yBorder)    //when O is pressed
+        if (Input.GetKey(KeyCode.W) && transform.position.y < yBorder)    //when W is pressed
         {
             transform.position = new Vector2(transform.position.x, transform.position.y + speed);   //move up
         }
 
-        if (Input.GetKey(KeyCode.L) && transform.position.y > -yBorder)    //when L is pressed
+        if (Input.GetKey(KeyCode.S) && transform.position.y > -yBorder)    //when S is pressed
         {
             transform.position = new Vector2(transform.position.x, transform.position.y - speed); //move down
         }
